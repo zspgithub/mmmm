@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn1Id"
+        android:text="拍照" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/btn1Id"
+        android:id="@+id/btn2Id"
+        android:text="上传" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/btn2Id"
+        android:id="@+id/btn3Id"
+        android:text="录屏" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/btn1Id"
+        android:layout_height="match_parent">
+        <VideoView
+            android:id="@+id/videoId"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:visibility="invisible"/>
+        <ImageView
+            android:id="@+id/imgId"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_media_play"
+            android:background="@drawable/play_selector"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:id="@+id/playBtn1Id"/>
+    </FrameLayout>
+</RelativeLayout>
