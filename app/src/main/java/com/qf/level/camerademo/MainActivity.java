@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_CODE_VIDEO = 200;
     @Event(R.id.btn1Id)
     private void takePhoto(View view){
-
+//kkkkkkkkkkkkkkkkkkk
         path= Environment.getExternalStorageDirectory()+"/zsp.jpg";
         Intent cameraIntent=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         //设置照片保存路径
